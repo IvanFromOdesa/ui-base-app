@@ -14,6 +14,8 @@ import * as PAGES from 'constants/pages';
 import {
   fetchUser,
 } from '../actions/user';
+import CitySetUp from 'pages/CitySetUp';
+import Cities from 'pages/Cities/containers/Cities';
 
 const App = () => {
   const [state, setState] = useState({
@@ -40,6 +42,15 @@ const App = () => {
               </Route>
               <Route path={`/${PAGES.INITIAL}`}>
                 <PageInitial />
+              </Route>
+              <Route path={`/${PAGES.CITIES}`}>
+                <Cities/>
+              </Route>
+              <Route path={`/${PAGES.CITY_SET_UP}/:id`}>
+                <CitySetUp/>
+              </Route>
+              <Route path={`/${PAGES.CITY_SET_UP}`}>
+                <CitySetUp/>
               </Route>
               <Redirect from="*" to={`/${PAGES.INITIAL}`} />
             </Switch>

@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Link from 'components/Link';
 import Typography from 'components/Typography';
 import useAccessValidate from 'hooks/useAccessValidate';
+import { NavLink } from 'react-router-dom';
 
 const getClasses = makeStyles(() => ({
   container: {
@@ -49,6 +50,10 @@ const Initial = ({
           Не могу ничего показать :(
         </Typography>
       )}
+      <br/>
+      <div>
+        <NavLink to="/cities"><b>Cities</b></NavLink>
+      </div>
     </div>
   )
 };
